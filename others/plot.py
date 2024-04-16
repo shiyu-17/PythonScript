@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
 # Load your JSON data
-with open('keypoints_val_results_0.json', 'r') as json_file:
+with open('person_keypoints_val.json', 'r') as json_file:
     data = json.load(json_file)
 
 # Extract keypoints and skeleton connections
@@ -29,7 +29,7 @@ for sk in skeleton:
 plt.plot(x[v > 0], y[v > 0], 'o', markersize=5, markerfacecolor='red', markeredgecolor='k', markeredgewidth=2)
 
 # Load and show the image
-img_path = 'val/0.jpg'
+img_path = '000000000010.jpg'
 img = mpimg.imread(img_path)
 plt.imshow(img)
 

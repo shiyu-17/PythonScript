@@ -27,7 +27,7 @@ json_data = {
 json_string = json.dumps(json_data, indent=4)
 print(json_string)
 
-output_file = "person_keypoints_val.json"
+output_file = "others/person_keypoints_val.json"
 
 with open(output_file, "w") as f:
     f.write(json_string)
