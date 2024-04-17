@@ -1,4 +1,4 @@
-# Function: Preprocess the dataset to extract CSI and frames from the original dataset.
+# Function: Preprocess the dataset to extract CSI and images from the original dataset.
 import csv
 import os
 import shutil
@@ -25,7 +25,7 @@ def normal_process(data_path, output_path):
         video_files = [name for name in os.listdir(file_path)] # E:\dataset\Video\pic_clap\hb-2-2-4-1-1-c01.dat
 
         train, test = train_test_split(
-            video_files, test_size=0.3, random_state=42)
+            video_files, test_size=0.3, random_state=42, stratify=[label]*len(video_files))
 
         train_dir = os.path.join(output_path, 'train', label) # F:\data\train\pic_clap
         test_dir = os.path.join(output_path, 'test', label)
