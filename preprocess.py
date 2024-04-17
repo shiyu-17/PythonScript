@@ -63,7 +63,7 @@ def process_file(data_path, label, video_file, output_dir):
     with open(csi_file, 'r') as csif:
         reader = csv.reader(csif)
         for line in reader:
-            line_array = np.array([float(v[:6]) for v in line])           # 取字符串前6位从而去除24.5253.1的情况
+            line_array = np.array([float(v[:6]) for v in line])
             csi.append(line_array[np.newaxis, ...])
 
     # 将 csi 数据平均裁剪为 4 份
