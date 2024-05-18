@@ -1,6 +1,7 @@
 import json
 import os
 
+# 这里读取的是coco/bbox.py 生成的AP.json文件，里面包含了所有图片的bbox信息
 with open('AP.json') as bbox_file:
     bbox_data = json.load(bbox_file)
 
