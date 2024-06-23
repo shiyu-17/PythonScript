@@ -91,7 +91,7 @@ def process_file(data_path, label, video_file, output_dir):
     
     for image in capture:
         imagename = os.path.basename(image)
-        if imagename == "1.jpg" or imagename == "12.jpg" or imagename == "23.jpg" or imagename == "34.jpg":
+        if imagename == "9.jpg" or imagename == "15.jpg" or imagename == "26.jpg" or imagename == "37.jpg":
             new_filename = f"{filename}-{imagename[-5:-4]}.jpg"  # hb-2-2-4-1-1-c01-1.jpg 
             print(new_filename)
             output_path = os.path.join(output_dir, new_filename)
@@ -101,5 +101,5 @@ def process_file(data_path, label, video_file, output_dir):
 
 if __name__ == "__main__":
 
-    normal_process(r'E:\dataset', r'F:\data')
+    normal_process(r'E:\A504\tmp', r'F:\data')
 
